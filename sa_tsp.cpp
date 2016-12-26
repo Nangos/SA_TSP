@@ -170,9 +170,9 @@ void saTSP::CalCulate_length(unit &p)
     p.length = 0;  
     for (j = 1; j < nCities; j++)   
     {  
-        p.length += length_table[ p.path[j-1] ][ p.path[j] ];  
+        p.length += length_table[ p.path[j-1] -1][ p.path[j] -1];  
     }  
-    p.length += length_table[p.path[ nCities - 1] ][ p.path[0] ];  
+    p.length += length_table[p.path[ nCities - 1]-1 ][ p.path[0]-1 ];  
 }  
   
 void saTSP::print( unit &p)  
